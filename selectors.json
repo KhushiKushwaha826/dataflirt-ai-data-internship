@@ -1,0 +1,13 @@
+{
+  "title": {
+    "version": 1,
+    "strategy": "id",
+    "value": "productTitle"
+  },
+  "price": {
+    "version": 1,
+    
+    "strategy": "class",
+    "value": "a-price-whole"
+  }
+}
