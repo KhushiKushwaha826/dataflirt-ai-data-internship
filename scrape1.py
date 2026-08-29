@@ -18,7 +18,7 @@ print(f"Total files found: {len(html_files)}")
 
 
 def ask_llm_for_price(soup):
-    """Jab regex confuse ho jaye, LLM se poochho asli price kaunsa hai"""
+
     price_area = soup.find(id="corePriceDisplay_desktop_feature_div") or soup.find(id="centerCol") or soup
     snippet = price_area.get_text(separator=" ", strip=True)[:1500]
 
@@ -120,6 +120,6 @@ print(f"Title null rate: {null_rate_title:.0%}")
 print(f"Price null rate: {null_rate_price:.0%}")
 
 if null_rate_title > THRESHOLD:
-    print("⚠️ DRIFT DETECTED in title extraction")
+    print(" DRIFT DETECTED in title extraction")
 if null_rate_price > THRESHOLD:
-    print("⚠️ DRIFT DETECTED in price extraction")
+    print(" DRIFT DETECTED in price extraction")

@@ -22,7 +22,7 @@ def m5_drop_price_symbol(c):
     return c.replace('a-price-symbol', 'a-price-symbol-x')
 
 def m6_reorder_attributes(c):
-    # id aur class ka order swap karo productTitle span mein
+
     return re.sub(
         r'<span id="productTitle" class="([^"]*)"',
         r'<span class="\1" id="productTitle"',
@@ -30,7 +30,7 @@ def m6_reorder_attributes(c):
     )
 
 def m7_add_extra_whitespace(c):
-    # productTitle ke aas paas junk whitespace/comments daal do
+
     return c.replace('id="productTitle"', 'id="productTitle" data-mutated="true"')
 
 def m8_nested_wrap_price(c):

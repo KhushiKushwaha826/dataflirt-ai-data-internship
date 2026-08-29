@@ -11,7 +11,7 @@ The main idea is simple: websites change their design from time to time. When
 that happens, a normal scraper breaks and stops working. My scraper is built to
 notice when it breaks, and try different ways to fix itself before giving up.
 
-## How the whole system works (step by step)
+## How the whole system works
 
 1. **Fetch** — the program gets the HTML of a product page (either from a saved
    file, or from the internet using an async scraper I built).

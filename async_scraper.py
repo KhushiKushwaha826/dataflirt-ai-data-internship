@@ -31,7 +31,6 @@ HEADERS = {
     "Accept-Language": "en-IN,en;q=0.9"
 }
 
-# ek time pe max itni requests ek saath jaayengi (polite rate)
 SEMAPHORE = asyncio.Semaphore(3)
 
 
@@ -40,7 +39,7 @@ async def fetch_one(client, url, index):
         try:
             response = await client.get(url, headers=HEADERS, follow_redirects=True)
 
-            # agar signin/captcha pe redirect hua, skip karo
+            # agar signin/captcha pe redirect hua, skip kr dungi
             if "ap/signin" in str(response.url) or "captcha" in str(response.url).lower():
                 print(f"[{index}] BLOCKED (redirected to signin/captcha): {url}")
                 return
@@ -57,7 +56,7 @@ async def fetch_one(client, url, index):
         except Exception as e:
             print(f"[{index}] ERROR fetching {url}: {e}")
 
-        # polite delay har request ke baad
+    
         await asyncio.sleep(2)
 
 
