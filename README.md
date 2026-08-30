@@ -261,3 +261,8 @@ it just quietly returned incorrect data. I only noticed it by manually
 checking the printed output line by line, instead of only looking at the
 success/failure count. This taught me to always double-check what a fallback
 actually returns, not just whether it returns something.
+
+## Live Demo
+- API: https://dataflirt-ai-data-internship.onrender.com
+- Try it: `/items` and `/drift` endpoints
+- Note: free tier may take 30-60 seconds to wake up on first request
